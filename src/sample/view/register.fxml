@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegisterController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="700.0" style="-fx-background-color: #8c7b75;">
+         <children>
+            <Label alignment="CENTER" layoutX="302.0" layoutY="24.0" text="To Do">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="registerFirstName" layoutX="195.0" layoutY="128.0" prefHeight="25.0" prefWidth="311.0" promptText="First Name" />
+      <JFXTextField fx:id="registerLastName" layoutX="195.0" layoutY="163.0" prefHeight="25.0" prefWidth="311.0" promptText="Last Name" />
+      <JFXTextField fx:id="registerUsername" layoutX="195.0" layoutY="220.0" prefHeight="25.0" prefWidth="311.0" promptText="Username" />
+      <JFXPasswordField fx:id="registerPassword" layoutX="195.0" layoutY="256.0" prefHeight="25.0" prefWidth="311.0" promptText="Password" />
+      <JFXButton fx:id="registerButton" layoutX="306.0" layoutY="307.0" style="-fx-background-color: #bcaaa4;" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

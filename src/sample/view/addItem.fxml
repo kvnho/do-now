@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddItemController">
+   <children>
+      <AnchorPane prefHeight="84.0" prefWidth="700.0" style="-fx-background-color: #8c7b75;">
+         <children>
+            <Label layoutX="302.0" layoutY="16.0" text="To Do" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="notTaskLabel" alignment="CENTER" layoutX="195.0" layoutY="163.0" prefHeight="65.0" prefWidth="311.0" text="No Tasks for Today!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="addButton" fitHeight="48.0" fitWidth="48.0" layoutX="327.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icon_add.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
