@@ -32,5 +32,15 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label fx:id="successLabel" alignment="CENTER" layoutX="251.0" layoutY="336.0" prefHeight="20.0" prefWidth="199.0" text="Task Added Successfully" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="tasksButton" layoutX="576.0" layoutY="352.0" prefHeight="39.0" prefWidth="117.0" style="-fx-background-color: #bcaaa4;" text="Back to Tasks" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

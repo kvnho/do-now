@@ -3,9 +3,15 @@ package sample.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import sample.database.DatabaseHandler;
 import sample.model.Task;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -29,6 +35,12 @@ public class AddItemFormController {
 
     @FXML
     private JFXButton saveTaskButton;
+
+    @FXML
+    private Label successLabel;
+
+    @FXML
+    private JFXButton tasksButton;
 
     @FXML
     void initialize() {
@@ -55,6 +67,26 @@ public class AddItemFormController {
 
                 try {
                     databaseHandler.insertTask(task);
+                    successLabel.setVisible(true);
+                    tasksButton.setVisible(true);
+
+                    taskField.setText("");
+                    descriptionField.setText("");
+
+                    tasksButton.setOnAction(event1 -> {
+                        FXMLLoader loader = new FXMLLoader();
+                        loader.setLocation(getClass().getResource("/sample/view/list.fxml"));
+
+                        try {
+                            loader.load();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        Parent root = loader.getRoot();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root));
+                        stage.showAndWait();
+                    });
                 } catch (SQLException e) {
                     e.printStackTrace();
                 } catch (ClassNotFoundException e) {
